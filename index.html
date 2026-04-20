@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Beranda</title>
+    
+    <!-- 1. CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="splash.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Devicon -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    
+    <!-- 2. CSS Internal -->
+    <style>
+        /* Agar navbar transparan dan melayang di atas bg hero khusus di Beranda */
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent !important; /* Timpa warna biru dari style.css */
+            box-shadow: none !important; /* Hilangkan bayangan */
+            z-index: 10; /* Agar navbar berada di posisi terdepan */
+        }
+
+        .hero-section {
+            background: linear-gradient(to bottom, rgba(22, 38, 89, 0.8), rgba(0, 0, 0, 0.6)), url('img/bg.png') no-repeat center center / cover;
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 20px 20px 20px; /* Jaga jarak aman dengan navbar */
+        }
+    </style>
+</head>
+<body>
+    <!-- STRUKTUR HTML5: Header -->
+    <header>
+        <div class="logo">
+            <span> Rifki Azis </span> 
+            <img src="img/logo.png" alt="Logo"> 
+        </div>
+        
+        <!-- STRUKTUR HTML5: Navigation -->
+        <nav>
+            <ul>
+                <!-- Element Link -->
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="project.html">Proyek</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- STRUKTUR HTML5: Main -->
+    <main>
+        <!-- STRUKTUR HTML5: Section -->
+        <section class="hero-section">
+            <!-- 3. CSS Inline -->
+            <h1 style="font-size: 3.5rem; margin-bottom: 10px; font-weight: normal;">Halo, Saya Rifki Ramdani Azis</h1>
+            <p>Selamat datang di halaman portofolio pribadi saya.</p>
+        </section>
+
+        <section class="profile">
+            <!-- Element Image -->
+            <img src="img/me.png" alt="Foto Profil" class="profile-img">
+            <div class="bio">
+                <h2>“One day your life will flash before your eyes. Make sure it's worth watching” </h2>
+                <h3>― Gerard Way</h3>
+                <p>Saya adalah seorang mahasiswa semester akhir jurusan Teknik Informatika dengan fokus pada pengembangan web dan aplikasi mobile. </p>
+                <p><b>Temukan lebih banyak tentang saya di bawah ini!</b></p>
+                <!-- Tombol Bulat Sosial Media -->
+                <div class="social-circles">
+                    <a href="https://github.com/" target="_blank" class="circle-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://instagram.com/" target="_blank" class="circle-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/" target="_blank" class="circle-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH STACK SECTION -->
+        <section class="tech-stack content-section">
+            <h2 class="section-title" style="text-align: center;">Tech Stack</h2>
+            <div class="tech-slider">
+                <div class="tech-track">
+                    <!-- Set 1 -->
+                    <div class="tech-item"><i class="devicon-figma-plain"></i></div>
+                    <div class="tech-item"><i class="devicon-cplusplus-plain"></i></div>
+                    <div class="tech-item"><i class="devicon-csharp-plain"></i></div>
+                    <div class="tech-item"><i class="devicon-python-plain"></i></div>
+                    <div class="tech-item"><i class="devicon-html5-plain"></i></div>
+                    <div class="tech-item"><i class="devicon-css3-plain"></i></div>
+                    <div class="tech-item"><i class="devicon-javascript-plain"></i></div>
+                    <div class="tech-item"><i class="devicon-php-plain"></i></div>
+                    <div class="tech-item"><i class="devicon-flutter-plain"></i></div>
+                    <!-- Set 2 -->
+                    <div class="tech-item"><i class="devicon-figma-plain"></i></div>
+                    <div class="tech-item"><i class="devicon-cplusplus-plain"></i></div>
+                    <div class="tech-item"><i class="devicon-csharp-plain"></i></div>
+                    <div class="tech-item"><i class="devicon-python-plain"></i></div>
+                    <div class="tech-item"><i class="devicon-html5-plain"></i></div>
+                    <div class="tech-item"><i class="devicon-css3-plain"></i></div>
+                    <div class="tech-item"><i class="devicon-javascript-plain"></i></div>
+                    <div class="tech-item"><i class="devicon-php-plain"></i></div>
+                    <div class="tech-item"><i class="devicon-flutter-plain"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT I DO SECTION -->
+        <section class="what-i-do content-section">
+            <h2 class="section-title">What I Do</h2>
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Membangun website responsif dan dinamis, dari landing page hingga aplikasi web kompleks.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Mobile App</h3>
+                    <p>Mengembangkan aplikasi mobile yang intuitif dan berkinerja tinggi untuk kebutuhan harian.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Merancang antarmuka pengguna yang estetis sekaligus memastikan pengalaman navigasi yang optimal.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-plug"></i></div>
+                    <h3>API Integration</h3>
+                    <p>Menghubungkan berbagai sistem dan memastikan aliran data berjalan secara mulus antar platform.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-database"></i></div>
+                    <h3>Database Management</h3>
+                    <p>Merancang struktur database yang efisien serta mengelola penyimpanan data secara aman.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Problem Solving</h3>
+                    <p>Memberikan solusi teknis yang inovatif dan efisien untuk setiap tantangan pengembangan.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

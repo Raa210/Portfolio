@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Kontak</title>
+    
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Internal -->
+    <style>
+        /* Agar navbar transparan di atas bg hero khusus di Kontak */
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent !important;
+            box-shadow: none !important;
+            z-index: 10;
+        }
+
+        body {
+            background: linear-gradient(to bottom, rgba(22, 38, 89, 0.8), rgba(0, 0, 0, 0.6)), url('img/bg.png') no-repeat center center / cover;
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 140px auto 40px auto; /* Margin atas ditinggikan untuk kompensasi navbar absolute */
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.1); /* Efek kaca transparan */
+            backdrop-filter: blur(5px);
+        }
+
+        .contact-container h1, .contact-container p, .form-group label {
+            color: white !important;
+        }
+
+        /* === TOMBOL LINKTREE STYLE === */
+        .linktree-container {
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            text-align: center;
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .link-btn:hover {
+            background-color: white;
+            color: #162659 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span> Rifki Azis </span> 
+            <img src="img/logo.png" alt="Logo"> 
+        </div>
+        <nav>
+            <ul>
+                <!-- Element Link -->
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="project.html">Proyek</a></li>
+                <li><a href="contact.html" class="active">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="contact-container">
+                <!-- CSS Inline -->
+                <h1 style="text-align: center; color: var(--primary-color); font-weight: normal;">Hubungi Saya</h1>
+                <p style="text-align: center; margin-bottom: 20px;">Silakan tinggalkan pesan, saya akan membalasnya.</p>
+                
+                <!-- Element Form -->
+                <form action="proses_kontak.php" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap:</label>
+                        <!-- Element Input -->
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <!-- Element Input -->
+                        <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pesan">Pesan:</label>
+                        <textarea id="pesan" name="pesan" rows="5" placeholder="Tuliskan pesan Anda..." required></textarea>
+                    </div>
+
+                    <!-- Element Button -->
+                    <button type="submit" class="submit-btn">Kirim Pesan</button>
+                </form>
+
+                <!-- Tombol ala Linktree -->
+                <div class="linktree-container">
+                    <p style="text-align: center; margin-bottom: 15px; font-weight: bold;">Atau Temukan Saya Di</p>
+                    <a href="https://instagram.com/" target="_blank" class="link-btn"><i class="fab fa-instagram" style="margin-right: 8px;"></i>Instagram</a>
+                    <a href="https://github.com/Raa210" target="_blank" class="link-btn"><i class="fab fa-github" style="margin-right: 8px;"></i>GitHub</a>
+                    <a href="https://www.linkedin.com/in/rifkiazis" target="_blank" class="link-btn"><i class="fab fa-linkedin" style="margin-right: 8px;"></i>LinkedIn</a>
+                    <a href="https://facebook.com/" target="_blank" class="link-btn"><i class="fab fa-facebook" style="margin-right: 8px;"></i>Facebook</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

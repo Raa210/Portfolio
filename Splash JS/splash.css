@@ -1,0 +1,141 @@
+/* ===========================
+   SPLASH SCREEN ANIMATION
+   =========================== */
+
+/* Hindari scroll selagi splash aktif */
+body.splash-active {
+    overflow: hidden;
+}
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-color, #162659);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: clip-path 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+    /* Lingkaran memenuhi layar */
+    clip-path: circle(150% at 50% 50%);
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+#splash-screen.circle-reveal {
+    /* Lingkaran mengecil ke kursor atau center */
+    clip-path: circle(0% at 50% 50%);
+    pointer-events: none; /* Agar klik tetap bisa dilakukan di luar area setelah mulai menghilang */
+}
+
+/* Container Phase 1 & 2 */
+#splash-phase-1, #splash-phase-2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Phase Toggle */
+.splash-hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+
+/* --- Phase 1: Loading --- */
+.splash-title {
+    font-family: 'Stigsa Display', 'Playfair Display', serif;
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.splash-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.progress-bar-container {
+    width: 300px;
+    height: 15px;
+    border: 2px solid white;
+    border-radius: 4px; /* Slightly rounded */
+    padding: 2px;
+    position: relative;
+    /* Blocky design like reference */
+    background: transparent;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    transition: width 0.1s linear;
+}
+
+/* --- Phase 2: Login --- */
+#splash-phase-2 {
+    transform: translateY(20px);
+}
+#splash-phase-2:not(.splash-hidden) {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px; /* Slight rounded edges */
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 3px solid white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-family: 'Stigsa Display', 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.pin-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.pin-dot {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+
+.pin-dot.filled {
+    background-color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}

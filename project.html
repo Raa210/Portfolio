@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Karya</title>
+    
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- CSS Internal -->
+    <style>
+        /* Mengatur header agar transparan di halaman project */
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent !important;
+            box-shadow: none !important;
+            z-index: 10;
+        }
+
+        body {
+            background: linear-gradient(to bottom, rgba(22, 38, 89, 0.8), rgba(0, 0, 0, 0.8)), url('img/bg.png') no-repeat center center / cover;
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* Karena navbar absolute, berikan jarak untuk judul halaman */
+        .page-header {
+            padding-top: 150px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: white;
+            font-weight: normal;
+        }
+
+        .page-header p {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span> Rifki Azis </span> 
+            <img src="img/logo.png" alt="Logo"> 
+        </div>
+        <nav>
+            <ul>
+                <!-- Element Link -->
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="project.html" class="active">Proyek</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Karya & Proyek</h1>
+            <p>Beberapa hasil karya web dan pengembangan sistem yang pernah saya kerjakan.</p>
+        </section>
+
+        <section class="content-section">
+            <div class="projects-grid">
+                
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <img src="img/ruangan.png" alt="Web E-Commerce" class="project-img">
+                    <div class="project-info">
+                        <h3>Web Peminjaman Ruangan Kampus</h3>
+                        <p>Aplikasi peminjaman ruangan berbasis web yang membantu mahasiswa dan dosen dalam meminjam ruangan di kampus. Fitur manajemen peminjaman dan antarmuka responsif.</p>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <img src="img/3.jpeg" alt="Web Portal Berita" class="project-img">
+                    <div class="project-info">
+                        <h3>Sistem Absensi Digital Berbasis Face Recognition dan RFID</h3>
+                        <p>Sistem absensi digital berbasis face recognition dan RFID yang dirancang untuk mempermudah proses absensi di lingkungan kampus.</p>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <img src="img/eyeshowcash.png" alt="Web Point of Sales" class="project-img">
+                    <div class="project-info">
+                        <h3>Perancangan Aplikasi Pengenalan Nilai Uang Untuk Penderita Tunanetra</h3>
+                        <p>Perancangan aplikasi pengenalan nilai uang yang dirancang untuk membantu penderita tunanetra dalam mengenali nilai uang.</p>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card">
+                    <img src="img/bumikita.png" alt="Web E-Commerce" class="project-img">
+                    <div class="project-info">
+                        <h3>Perancangan Aplikasi Food Waste - Bumikita</h3>
+                        <p>Perancangan aplikasi food waste yang dirancang untuk membantu mengurangi limbah makanan.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Tentang</title>
+    
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Internal -->
+    <style>
+        body {
+            background-color: #ffffff !important;
+            color: #333333 !important;
+        }
+
+        .content-section h2, .content-section h3, .education-table td {
+            color: #333333 !important;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            box-shadow: none !important; 
+        }
+
+        .page-header {
+            position: relative;
+            background: url('img/bg.png') no-repeat center center / cover;
+            padding: 150px 20px 80px 20px; 
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            
+        }
+
+        .page-header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background-color: rgba(22, 38, 89, 0.4); 
+            z-index: 1;
+            background: linear-gradient(to bottom, rgba(22, 38, 89, 0.8), rgba(0, 0, 0, 0.5)), url('img/bg.png') no-repeat center center / cover;
+        }
+
+        .page-header h1, .page-header p {
+            position: relative;
+            z-index: 2;
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span> Rifki Azis </span> 
+            <img src="img/logo.png" alt="Logo"> 
+        </div>
+        <nav>
+            <ul>
+                <!-- Element Link -->
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html" class="active">Tentang</a></li>
+                <li><a href="project.html">Proyek</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <!-- CSS Inline -->
+            <h1 style="color: #162659; font-weight: normal;">Tentang Saya</h1>
+            <p>Profil, Pendidikan, dan Keterampilan</p>
+        </section>
+
+        <section class="content-section">
+            <article class="about-profile">
+                <div class="profile-image-col">
+                    <img src="img/me.png" alt="Foto Profil" class="profile-img">
+                </div>
+                <div class="profile-text-col">
+                    <h2 class="profile-title">UI/UX Designer & Web Developer.</h2>
+                    <p class="profile-subtitle">Seorang mahasiswa semester akhir jurusan Teknik Informatika dengan fokus pada pengembangan web dan aplikasi mobile.</p>
+                    
+                    <div class="profile-details">
+                        <ul class="details-list">
+                            <li><i class="fas fa-chevron-right" style="color: var(--primary-color);"></i> <strong>Birthday:</strong> 21 October 2005</li>
+                            <li><i class="fas fa-chevron-right" style="color: var(--primary-color);"></i> <strong>Website:</strong> www.rifki.com</li>
+                            <li><i class="fas fa-chevron-right" style="color: var(--primary-color);"></i> <strong>Phone:</strong> +62 812 3456 7890</li>
+                            <li><i class="fas fa-chevron-right" style="color: var(--primary-color);"></i> <strong>City:</strong> Bekasi, Indonesia</li>
+                        </ul>
+                        <ul class="details-list">
+                            <li><i class="fas fa-chevron-right" style="color: var(--primary-color);"></i> <strong>Age:</strong> 20</li>
+                            <li><i class="fas fa-chevron-right" style="color: var(--primary-color);"></i> <strong>Degree:</strong> Diploma</li>
+                            <li><i class="fas fa-chevron-right" style="color: var(--primary-color);"></i> <strong>Email:</strong> rifkiazis2110@gmail.com</li>
+                            <li><i class="fas fa-chevron-right" style="color: var(--primary-color);"></i> <strong>Freelance:</strong> Available</li>
+                        </ul>
+                    </div>
+                    
+                    <p class="profile-desc">Saya adalah seorang mahasiswa semester akhir jurusan Teknik Informatika dengan fokus pada pengembangan web dan aplikasi mobile. Memiliki pengalaman dalam membuat sistem informasi dan aplikasi berbasis web, serta aktif dalam kegiatan organisasi dan kepanitiaan yang mengasah kemampuan kepemimpinan dan kerja sama tim.</p>
+                    <a href="cv.pdf" download class="cv-btn">
+                        <i class="fa-solid fa-download"></i> Download CV
+                    </a>
+                </div>
+            </article>
+            
+            <article>
+                <h2>Riwayat Pendidikan</h2>
+                <!-- Element Table -->
+                <table class="education-table">
+                    <thead>
+                        <tr>
+                            <th>Tahun</th>
+                            <th>Tingkat</th>
+                            <th>Institusi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2023 - Sekarang</td>
+                            <td>S1 Teknik Informatika</td>
+                            <td>Universitas Paramadina</td>
+                        </tr>
+                        <tr>
+                            <td>2020 - 2023</td>
+                            <td>Sekolah Menengah Atas</td>
+                            <td>SMAIT Annur</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article>
+                <h2>Pengalaman Organisasi</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>EXMAZART</h3>
+                            <p><b>2024</b></p>
+                            <p class="timeline-date">Anggota - Divisi Logistik</p>
+                            <p>Bertanggung jawab dalam mengoordinasikan logistik acara, memastikan ketersediaan sumber daya, serta mendukung kelancaran operasional acara.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Paramadina Social Care</h3>
+                            <p><b>2024 - 2025</b></p>
+                            <p class="timeline-date">Anggota - Management Disaster</p>
+                            <p>Bertanggung jawab dalam mengoordinasikan kegiatan kebencanaan, serta memberi edukasi terkait kebencanaan.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>EXMAZART</h3>
+                            <p><b>2025</b></p>
+                            <p class="timeline-date">Anggota - Divisi Logistik, Operator Acara</p>
+                            <p>Bertanggung jawab dalam mengoordinasikan logistik acara, memastikan ketersediaan sumber daya, serta mendukung kelancaran operasional acara.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h2>Keterampilan</h2>
+                <h3>Hard Skills:</h3>
+                <!-- Element List -->
+                <ul class="skills-list">
+                    <li>HTML5 & CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Supabase</li>
+                    <li>UI/UX Design</li>
+                    <li>Responsive Web Design</li>
+                    <li>Internet Of Things (IoT)</li>
+                </ul>
+                <h3>Soft Skills:</h3>
+                <!-- Element List -->
+                <ul class="skills-list">
+                    <li>Kerja Sama Tim</li>
+                    <li>Komunikasi</li>
+                    <li>Problem Solving</li>
+                    <li>Manajemen Waktu</li>
+                </ul>
+            </article>
+
+            <article>
+                <h1 style="text-align: center;">Galeri </h1>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="img/1.jpeg" alt="Galeri 1"></div>
+                    <div class="gallery-item"><img src="img/2.jpeg" alt="Galeri 2"></div>
+                    <div class="gallery-item"><img src="img/3.jpeg" alt="Galeri 3"></div>
+                    <div class="gallery-item"><img src="img/4.jpg" alt="Galeri 4"></div>
+                    <div class="gallery-item"><img src="img/pliot.png" alt="Galeri 5"></div>
+                    <div class="gallery-item"><img src="img/5.jpg" alt="Galeri 6"></div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
