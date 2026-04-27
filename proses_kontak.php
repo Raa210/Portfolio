@@ -46,15 +46,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Jika tidak ada error, proses data simulasi berhasil
+    // Jika tidak ada error, simpan data ke database
     if (empty($errors)) {
-        $success_message = "Pesan Anda berhasil terkirim! Terima kasih telah menghubungi saya.";
-        
-        $submitted_data = [
-            'Nama Lengkap' => $nama,
-            'Email' => $email,
-            'Isi Pesan' => $pesan
-        ];
+        require_once 'koneksi.php';
+        try {
+            $stmt = $pdo->prepare("INSERT INTO pesan (nama, email, isi_pesan) VALUES (:nama, :email, :pesan)");
+            $stmt->execute([
+                ':nama' => $nama,
+                ':email' => $email,
+                ':pesan' => $pesan
+            ]);
+            $success_message = "Pesan Anda berhasil terkirim dan disimpan! Terima kasih telah menghubungi saya.";
+        } catch (PDOException $e) {
+            $errors[] = "Terjadi kesalahan saat menyimpan pesan: " . $e->getMessage();
+        }
     }
 } else {
     // Jika diakses secara langsung tanpa melalui form
